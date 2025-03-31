@@ -12,7 +12,7 @@ data['Attendance (%)'] = data['Attendance (%)']
 data['Midterm_Score'] = data['Midterm_Score']
 
 fig, ax = plt.subplots()
-plt.scatter(data_aggregated['Attendance (%)'], data_aggregated['Midterm_Score'], color='blue', alpha=0.7, s=50)
+plt.scatter(data['Attendance (%)'], data['Midterm_Score'], color='blue')
 
 plt.xlabel('Attendance by term')
 plt.ylabel('Midterm Score')
