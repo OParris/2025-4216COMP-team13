@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from data_loader import load_data
 
-def max_visulisation_one():
+def max_visualisation_one():
     # load data:
     data = load_data()
     # print(data)
@@ -93,7 +93,8 @@ def max_visulisation_one():
 
     # Display the plot
     plt.show()
+    
 
 
-
-max_visulisation_one()
+if __name__ == "__main__":
+    max_visualisation_one()
