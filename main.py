@@ -1,6 +1,6 @@
 import tkinter as tk
 from Q1_Max import max_visualisation_one  
-import Q1_Max
+
 # from data_loader import load_data
 
 # load_data()
@@ -16,4 +16,3 @@ btn_max_vis = tk.Button(root, text="Max Visualisation-One", command=run_max_visu
 btn_max_vis.pack(pady=10)
 
 root.mainloop()
-#
