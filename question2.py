@@ -34,13 +34,14 @@ axs[1, 0].set_ylabel("Parent Education Level")
 
 
 highschool_data = data[data['Parent_Education_Level'] == 'High School']
-axs[1, 1].boxplot(highschool_data['Final_Score'])
+axs[1, 1].boxplot(highschool_data['Final_Score'], vert=False, patch_artist=True, boxprops=dict(facecolor='purple', color='black'))
 axs[1, 1].set_title("High School Against Final Score")
 axs[1, 1].set_xlabel("Final Score")
 axs[1, 1].set_ylabel("Parent Education Level")
 
 for ax in axs.flat:
     ax.grid(True)
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
 
 plt.tight_layout()
 plt.show()

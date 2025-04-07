@@ -21,6 +21,7 @@ ax.set_xticks(range(1, 9))
 ax.set_yticks(range(1, 30))
 ax.set_ylabel(' avg study hours per week')
 ax.set_xlabel(' sleep hours per night')
+ax.set_title('do students who sleep less and stress more also study more')
 
 ax1= ax.twinx()
 ax1.scatter(mean_study_hours_Stress['Stress_Level (1-10)'], mean_study_hours_Stress['Study_Hours_per_Week'], color ='red')
