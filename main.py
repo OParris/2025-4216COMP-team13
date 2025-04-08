@@ -8,6 +8,8 @@ from Q2_Max import max_visualisation_two
 from Q2_Max import max_visualisation_three
 from OliviaQ1 import Oliva_Visualisation_One
 from OliviaQ2 import Oliva_Visualisation_Two
+from Q1_Louisa import Louisa_Visualisation_One
+from Q2_Louisa import Louisa_Visualisation_Two
 
 # Max's Imported Visualisation Functions:
 def run_max_visualisation_one():
@@ -18,7 +20,6 @@ def run_max_visualisation_two():
 
 def run_max_visualisation_three():
     max_visualisation_three()
-
 
 # Jake's Imported Visualisation Functions:
 def run_jake_visualisation_one():
@@ -37,6 +38,13 @@ def run_olivia_visualisation_one():
 def run_olivia_visualisation_two():
     Oliva_Visualisation_Two()
 
+# Louisa's Imported Visualisation Functions:
+def run_louisa_visualisation_one():
+    Louisa_Visualisation_One()
+
+def run_louisa_visualisation_two():
+    Louisa_Visualisation_Two()
+
 # Menu title / header
 root = tk.Tk()
 root.title("Team 13 Visualisations")
@@ -54,6 +62,10 @@ Jakes_frame.pack(padx=10, pady=10, fill="both", expand=True)
 # Olivia's Frame:
 Olivias_frame = tk.LabelFrame(root, text="Olivia's Visualisations", labelanchor='n', padx=10, pady=10)
 Olivias_frame.pack(padx=10, pady=10, fill="both", expand=True)
+
+# Louisa's Frame:
+Louisas_frame = tk.LabelFrame(root, text="Louisa's Visualisations", labelanchor='n', padx=10, pady=10)
+Louisas_frame.pack(padx=10, pady=10, fill="both", expand=True)
 
 # Buttons in each persons frames to run their visualisations:
 
@@ -83,6 +95,14 @@ btn_olivia_vis_one.pack(pady=10)
 
 btn_olivia_vis_two = tk.Button(Olivias_frame,text="Olivia Visualisation-Two", command=Oliva_Visualisation_Two)
 btn_olivia_vis_two.pack(pady=10)
+
+# Louisa's buttons:
+btn_louisa_vis_one = tk.Button(Louisas_frame,text="Louisa Visualisation-One", command=Louisa_Visualisation_One)
+btn_louisa_vis_one.pack(pady=10)
+
+btn_louisa_vis_two = tk.Button(Louisas_frame,text="Louisa Visualisation-Two", command=Louisa_Visualisation_Two)
+btn_louisa_vis_two.pack(pady=10)
+
 
 
 
