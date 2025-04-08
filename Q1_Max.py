@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from data_loader import load_data
 
+
 def max_visualisation_one():
     # load data:
     data = load_data()
@@ -77,7 +78,6 @@ def max_visualisation_one():
     ax.set_xticks(x)
     ax.set_xticklabels(metrics)
     ax.legend()
-
     # Function to attach value labels to each bar
     def autolabel(rects):
         for rect in rects:
@@ -91,8 +91,10 @@ def max_visualisation_one():
     autolabel(rects1)
     autolabel(rects2)
 
-    # Display the plot
+    ax.plot()
     plt.show()
+    # Display the plot
+    #plt.show()
     
 
 

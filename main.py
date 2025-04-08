@@ -4,6 +4,8 @@ from Jake_questions import jake_visualisation_one
 from Jake_questions import jake_visualisation_two
 from Jake_questions import jake_visualisation_three
 import Q1_Max
+from Q1_Max import max_visualisation_one  
+
 # from data_loader import load_data
 
 # load_data()
