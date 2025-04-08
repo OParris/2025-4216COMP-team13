@@ -1,22 +1,25 @@
-import csv
-import pandas as pd
 import matplotlib.pyplot as plt
+import seaborn as sns
+from data_loader import load_data  # your custom data loader
 
+def Zahra_Visualisation_One():
+    data = load_data()
+    data = data.dropna(subset=['Age', 'Grade'])
+    
+    plt.figure(figsize=(12, 6))
 
-# Read the data
-data = pd.read_csv("Students_Grading_Dataset.csv")
-print(data)
+    sns.boxplot(
+        x='Grade',
+        y='Age',
+        data=data,
+        order=['A', 'B', 'C', 'D', 'E', 'F'],
+        palette='Pastel1'
+    )
+    plt.title('Age Distribution by Grade (Box Plot)')
+    plt.xlabel('Grade')
+    plt.ylabel('Age')
+    plt.tight_layout()
+    plt.show()
 
-data['Final_Score'] = data['Final_Score'].round()
-
-plt.figure(figsize=(10, 6))
-plt.plot(age, final_grade, marker='o', linestyle='--' , color='green') 
-
-plt.title('Age vs Final Grade') 
-plt.xlabel('Age')
-plt.ylabel('Final Grade')
-
-plt.grid(True)
-plt.tight_layout()
-plt.show()
-
+if __name__ == "__main__":
+    Zahra_Visualisation_One()
