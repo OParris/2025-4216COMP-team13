@@ -5,7 +5,7 @@ from data_loader import load_data
 
 
 def Oliva_Visualisation_Two():
-    data = load_data
+    data = load_data()
     print(data)
 
     data['Final_Score'] = data['Final_Score'].round()
@@ -47,3 +47,5 @@ def Oliva_Visualisation_Two():
     plt.tight_layout()
     plt.show()
 
+if __name__ == "__main__":
+    Oliva_Visualisation_Two()
