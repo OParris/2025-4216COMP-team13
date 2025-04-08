@@ -54,8 +54,8 @@ def max_visualisation_three():
 
  
     #Visualization 2:
-    # To answer whether students with the same study hours but no extracurricular
-    # achieve higher or lower grades, group by study hours and calculate the average total score.
+
+    # Do students with same study hours but no extracurricular activities achieve higher or lower scores
 
     # avg total score of extracurricular group by study hours:
     group_extrac_by_hours = group_extrac.groupby('Study_Hours_per_Week')['Total_Score'].mean().reset_index()

@@ -1,27 +1,25 @@
-import csv
-import pandas as pd
 import matplotlib.pyplot as plt
-from data_loader import load_data
+import seaborn as sns
+from data_loader import load_data  # your custom data loader
 
-def Zahra_Visualisation_Two():
+def Zahra_Visualisation_One():
     data = load_data()
+    data = data.dropna(subset=['Age', 'Grade'])
+    
+    plt.figure(figsize=(12, 6))
 
-    data['Study_Hours_per_Week'] = data['Final_Score'].round()
-    df = pd.DataFrame(data)
-
-    data['Study_Hours_per_Week'] = data['Study_Hours_per_Week']
-    data['Final_Score'] = data['Final_Score']
-
-    fig, ax = plt.subplots()
-    plt.scatter(data['Study_Hours_per_Week'], data['Final_Score'], color='blue')
-
-    plt.xlabel('Hours studied per week')
-    plt.ylabel('Final Score')
-    plt.title('Overall score for students with most hours studied per week.')
-
-    plt.legend()
-    plt.grid(True, axis= 'y', linestyle='--', alpha= 0.7)
+    sns.boxplot(
+        x='Grade',
+        y='Age',
+        data=data,
+        order=['A', 'B', 'C', 'D', 'E', 'F'],
+        palette='Pastel1'
+    )
+    plt.title('Age Distribution by Grade (Box Plot)')
+    plt.xlabel('Grade')
+    plt.ylabel('Age')
+    plt.tight_layout()
     plt.show()
 
 if __name__ == "__main__":
-    Zahra_Visualisation_Two()
+    Zahra_Visualisation_One()
