@@ -3,13 +3,12 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-# Read the data
 data = pd.read_csv("Students_Grading_Dataset.csv")
 print(data)
 
 data['Final_Score'] = data['Final_Score'].round()
 
-fig, axs = plt.subplots(2, 2, figsize=(12,10))
+fig, axs = plt.subplots(2, 2, figsize=(14,12))
 
 
 phd_data = data[data['Parent_Education_Level'] == 'PhD']
