@@ -67,10 +67,10 @@ def max_visualisation_three():
     plt.figure(figsize=(10, 6))
     plt.plot(group_extrac_by_hours['Study_Hours_per_Week'],
              group_extrac_by_hours['Total_Score'],
-             marker='o',color='turquoise', label='Extracurricular')
+             marker='o',color='turquoise', label='Extracurricular', linestyle="none")
     plt.plot(group_noextrac_by_hours['Study_Hours_per_Week'],
              group_noextrac_by_hours['Total_Score'],
-             marker='o', color='violet', label='No Extracurricular')
+             marker='o', color='violet', label='No Extracurricular', linestyle="none")
     plt.xlabel("Study Hours per Week")
     plt.ylabel("Average Total Score")
     plt.title("Total Score vs. Study Hours (by Extracurricular Participation)")
