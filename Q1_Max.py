@@ -69,8 +69,8 @@ def max_visualisation_one():
     width = 0.35  
     
     fig, ax = plt.subplots(figsize=(10, 6))
-    rects1 = ax.bar(x - width/2, group_A_means, width, label="Student's: parents educated to bachelor's or above and high income")
-    rects2 = ax.bar(x + width/2, group_B_means, width, label="Student's: parents educated below bachelor's and low income")
+    rects1 = ax.bar(x - width/2, group_A_means, width, label="(A)Student's: parents educated to bachelor's or above and high income")
+    rects2 = ax.bar(x + width/2, group_B_means, width, label="(B)Student's: parents educated below bachelor's and low income")
     
     # Set labels and title
     ax.set_ylabel('Average Values')
