@@ -96,7 +96,9 @@ def jake_visualisation_three():
     ax=sns.barplot(data=filtered_data, x='Department', y='Total_Score', hue='Gender', palette='Set2')
 
     for p in ax.patches:
-        ax.annotate(f'{p.get_height():.2f}', 
+        height = p.get_height()
+        if height >0:
+            ax.annotate(f'{p.get_height():.2f}', 
                     (p.get_x() + p.get_width() / 2., p.get_height()), 
                     xytext=(0, 5),  # Offset the text slightly above the bar
                     textcoords='offset points',
