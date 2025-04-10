@@ -98,7 +98,7 @@ def jake_visualisation_three():
     for p in ax.patches:
         ax.annotate(f'{p.get_height():.2f}', 
                     (p.get_x() + p.get_width() / 2., p.get_height()), 
-                    xytext=(0, 5),  # Offset the text slightly above the bar
+                    xytext=(0, 5),  
                     textcoords='offset points',
                     ha='center', va='center', color='black', fontweight='bold')
     
