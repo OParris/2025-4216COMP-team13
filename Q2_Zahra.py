@@ -1,22 +1,27 @@
 import csv
 import pandas as pd
 import matplotlib.pyplot as plt
+from data_loader import load_data
 
+def Zahra_Visualisation_Two():
+    data = load_data()
 
-# Read the data
-data = pd.read_csv("Students_Grading_Dataset.csv")
-print(data)
+    data['Study_Hours_per_Week'] = data['Final_Score'].round()
+    df = pd.DataFrame(data)
 
-data['Final_Score'] = data['Final_Score'].round()
+    data['Study_Hours_per_Week'] = data['Study_Hours_per_Week']
+    data['Final_Score'] = data['Final_Score']
 
-plt.figure(figsize=(10, 6))
-plt.plot(age, final_grade, marker='o', linestyle='--' , color='green') 
+    fig, ax = plt.subplots()
+    plt.scatter(data['Study_Hours_per_Week'], data['Final_Score'], color='blue')
 
-plt.title('Age vs Final Grade') 
-plt.xlabel('Age')
-plt.ylabel('Final Grade')
+    plt.xlabel('Hours studied per week')
+    plt.ylabel('Final Score')
+    plt.title('Overall score for students with most hours studied per week.')
 
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+    plt.legend()
+    plt.grid(True, axis= 'y', linestyle='--', alpha= 0.7)
+    plt.show()
 
+if __name__ == "__main__":
+    Zahra_Visualisation_Two()
